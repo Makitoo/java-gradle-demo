@@ -1,5 +1,6 @@
 .gradle
 .idea
+makitoo
 build/
 
 # Ignore Gradle GUI config
