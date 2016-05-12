@@ -1,0 +1,39 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+buildscript {
+    repositories {
+        jcenter()
+        maven { url 'https://dashboard.makitoo.com/repo' }
+    }
+    dependencies {
+        classpath 'com.makitoo:makitoo-gradle-plugin:0.0.11'
+    }
+}
+
+repositories {
+    jcenter()
+    maven { url 'https://dashboard.makitoo.com/repo' }
+}
+
+group 'com.makitoo.demo'
+version '1.0-SNAPSHOT'
+
+apply plugin: 'java'
+apply plugin: 'application'
+apply plugin: 'makitoo4java'
+
+makitoo {
+    modules = [
+            'com.makitoo.handled.HandledModule',
+            'com.makitoo.hotcatches.HotFixesModule',
+            'com.makitoo.npe.NpeModule'
+    ]
+    compliance 8
+}
+
+sourceCompatibility = 1.8
+mainClassName = 'com.makitoo.demo.SparkServer'
+
+dependencies {
+    compile 'com.sparkjava:spark-core:2.0.0'
+    compile 'com.makitoo:makitoo-library-java:0.0.11'
+}
