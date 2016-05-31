@@ -5,7 +5,7 @@ buildscript {
         maven { url 'https://dashboard.makitoo.com/repo' }
     }
     dependencies {
-        classpath 'com.makitoo:makitoo-gradle-plugin:0.0.11'
+        classpath 'com.makitoo:makitoo-gradle-plugin:0.0.14'
     }
 }
 
@@ -35,5 +35,5 @@ mainClassName = 'com.makitoo.demo.SparkServer'
 
 dependencies {
     compile 'com.sparkjava:spark-core:2.0.0'
-    compile 'com.makitoo:makitoo-library-java:0.0.11'
+    compile 'com.makitoo:makitoo-library-java:0.0.14'
 }
